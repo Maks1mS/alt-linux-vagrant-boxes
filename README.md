@@ -1,0 +1,1 @@
+packer build -var-file=alt-server-v-10/vars.pkrvars.hcl libvirt.pkr.hcl
