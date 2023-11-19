@@ -10,9 +10,10 @@
 ("/pkg-install" action "write" lists "" auto #t)
 ("/preinstall" action "write")
 ("/grub" action "write" device "/dev/vda" passwd #f passwd_1 "*" passwd_2 "*")
+; настройка сетевого интерфейса на получение адреса по DHCP
 ("/net-eth" action "write" reset #t)
-("/net-eth" action "write" name "eth0" configuration "dhcp")
+("/net-eth" action "write" name "ens5" ipv "4" configuration "dhcp" default "" search "" dns "" computer_name "newhost" ipv_enabled #t)
 ("/net-eth" action "write" commit #t)
 ("/root/change_password" language ("en_US") passwd_2 "vagrant" passwd_1 "vagrant")
 ("/users/create_account" new_name "vagrant" gecos "vagrant" allow_su #t auto #f passwd_1 "vagrant" passwd_2 "vagrant" autologin #f)
-("/postinstall/laststate" script "http://server/script.sh")
+("/postinstall/laststate" script "https://raw.githubusercontent.com/Maks1mS/alt-linux-vagrant-boxes/main/alt-server-v-10/setup.sh")
