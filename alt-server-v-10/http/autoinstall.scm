@@ -16,4 +16,4 @@
 ("/net-eth" action "write" commit #t)
 ("/root/change_password" language ("en_US") passwd_2 "vagrant" passwd_1 "vagrant")
 ("/users/create_account" new_name "vagrant" gecos "vagrant" allow_su #t auto #f passwd_1 "vagrant" passwd_2 "vagrant" autologin #f)
-("/postinstall/laststate" script "https://raw.githubusercontent.com/Maks1mS/alt-linux-vagrant-boxes/main/alt-server-v-10/setup.sh")
+("/postinstall/firsttime" run "sleep 20 && curl https://raw.githubusercontent.com/Maks1mS/alt-linux-vagrant-boxes/main/alt-server-v-10/setup.sh -o /root/post.sh && /bin/bash /root/post.sh")
