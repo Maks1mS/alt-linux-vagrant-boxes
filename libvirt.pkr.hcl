@@ -73,14 +73,6 @@ build {
     "source.qemu.alt-linux"
   ]
 
-  # provisioner "ansible" {
-  #   playbook_file = "${var.setup_playbook}"
-  # }
-  #provisioner "shell" {
-    #script = "${var.setup_script}"
-    #execute_command = "python -c 'import pty; pty.spawn(\"/bin/bash\")'; echo 'vagrant' | su -c sh -c '{{ .Vars }} {{ .Path }}'"
-  #}
-
   post-processor "vagrant" {
     keep_input_artifact = false
     output              = "package.box"

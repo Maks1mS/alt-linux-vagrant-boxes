@@ -17,6 +17,3 @@ boot_command = [
   "ai curl=http://{{ .HTTPIP }}:{{ .HTTPPort }}/",
   "<f10>"
 ]
-
-setup_playbook = "./alt-server-v-10/setup.yml"
-setup_script = "./alt-server-v-10/setup.sh"

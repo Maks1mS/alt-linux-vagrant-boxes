@@ -1,0 +1,1 @@
+https://app.vagrantup.com/maks1ms/boxes/alt-server-v-10
